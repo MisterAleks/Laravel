@@ -33,23 +33,23 @@ class AdminController extends Controller
     }
 
     //Блок обновлений
-    public function refrashUser()
+    public function refreshUser()
     {
         return (new user())->getUsersData();
         //return user::all()->toArray();
     }
 
-    public function refrashRole()
+    public function refreshRole()
     {
         return role::all()->toArray();
     }
 
-    public function refrashDepartment()
+    public function refreshDepartment()
     {
         return department::all()->toArray();
     }
 
-    public function refrashGroup()
+    public function refreshGroup()
     {
         return group::all()->toArray();
     }

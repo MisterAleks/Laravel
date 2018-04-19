@@ -21,13 +21,13 @@ Route::group(['prefix' => 'admin'], function()
 {
 	Route::get('', 'AdminController@index');
 
-	Route::get('/refrashUser', 'AdminController@refrashUser');
+	Route::get('/refreshUser', 'AdminController@refreshUser');
 
-	Route::get('/refrashRole', 'AdminController@refrashRole');
+	Route::get('/refreshRole', 'AdminController@refreshRole');
 
-	Route::get('/refrashDepartment', 'AdminController@refrashDepartment');
+	Route::get('/refreshDepartment', 'AdminController@refreshDepartment');
 
-	Route::get('/refrashGroup', 'AdminController@refrashGroup');
+	Route::get('/refreshGroup', 'AdminController@refreshGroup');
 
 	Route::post('/saveUser', 'AdminController@saveUser');
 	

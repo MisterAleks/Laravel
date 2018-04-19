@@ -86,7 +86,7 @@ $( document ).ready(function() {
 
     //Обновление предметов
     $.ajax({
-        url:'http://localhost:8080/teacher/refrashSubject',
+        url:'http://localhost:8080/teacher/refreshSubject',
         type:'GET',
         success: function(recieved){
 
@@ -113,7 +113,7 @@ $( document ).ready(function() {
 
     //Обновление групп
     $.ajax({
-        url:'http://localhost:8080/teacher/refrashStudyGroup',
+        url:'http://localhost:8080/teacher/refreshStudyGroup',
         type:'GET',
         success: function(recieved){
 
@@ -219,12 +219,12 @@ $( document ).ready(function() {
 
             },
             error: function(xhr,textStatus){
-                Materialize.toast('Refrash - ' + textStatus, 2000, 'rounded');
+                Materialize.toast('refresh - ' + textStatus, 2000, 'rounded');
             }
         })
     };
 
-    $('#refrash').click(function (){
+    $('#refresh').click(function (){
 
         //Для того, чтобы получить текст
         //var group = $('#select-group option:selected').text();
@@ -268,7 +268,7 @@ $( document ).ready(function() {
                 $('#table-head').append(out);
             },
             error: function(xhr,textStatus){
-                Materialize.toast('Refrash - ' + textStatus, 2000, 'rounded');
+                Materialize.toast('refresh - ' + textStatus, 2000, 'rounded');
             }
         });
     })
@@ -290,7 +290,7 @@ $( document ).ready(function() {
             },
             success: function(recieved) {
                 //Обновляем данные
-                $('#refrash').click();
+                $('#refresh').click();
             },
             error: function(xhr,textStatus){
                 Materialize.toast('Add date - ' + textStatus, 2000, 'rounded');

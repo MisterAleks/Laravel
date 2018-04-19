@@ -36,7 +36,7 @@
         </div>
 
         <div class="col s1">
-            <button id="refrash" class="btn-floating btn-small waves-effect waves-light orange darken-1">
+            <button id="refresh" class="btn-floating btn-small waves-effect waves-light orange darken-1">
                 <i class="material-icons">cached</i>
             </button>
         </div>

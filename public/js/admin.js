@@ -23,14 +23,14 @@ var toast = $('<span>Загрузка... </span>').add(preloader);
 //////////////////////////////////////////////////////////////////////////////////////
 
 
-function refrashAll() {
+function refreshAll() {
 
     //Включаем всплывающее окно (для интерактивности) 
     Materialize.toast(toast, 1000, 'rounded');
 
     //Обновление пользователей
     $.ajax({
-        url:'admin/refrashUser',
+        url:'admin/refreshUser',
         type:'GET',
         success: function(received){
 
@@ -61,7 +61,7 @@ function refrashAll() {
 
     //Обновление ролей
     $.ajax({
-        url:'admin/refrashRole',
+        url:'admin/refreshRole',
         type:'GET',
         success: function(received){
 
@@ -86,7 +86,7 @@ function refrashAll() {
 
     //Обновление кафедр
     $.ajax({
-        url:'admin/refrashDepartment',
+        url:'admin/refreshDepartment',
         type:'GET',
         success: function(received){
 
@@ -111,7 +111,7 @@ function refrashAll() {
 
     //Обновление групп
     $.ajax({
-        url:'admin/refrashGroup',
+        url:'admin/refreshGroup',
         type:'GET',
         success: function(received){
 
@@ -150,7 +150,7 @@ $( document ).ready(function() {
     });
 
     //Обновляем все
-    refrashAll();
+    refreshAll();
 
     $('#select-user1').change(function() {
 
@@ -258,7 +258,7 @@ $( document ).ready(function() {
                 
                 Materialize.toast('Сохранено!', 2000, 'rounded');
 
-                refrashAll();
+                refreshAll();
             },
             error: function(xhr,textStatus){
                 Materialize.toast('Сохранение пользователя - ' + textStatus, 2000, 'rounded');
@@ -284,7 +284,7 @@ $( document ).ready(function() {
             type:'GET',
             success: function(){
                 Materialize.toast('Удалено!', 2000, 'rounded');
-                refrashAll();
+                refreshAll();
             },
             error: function(xhr,textStatus){
                 Materialize.toast('Удаление пользователя - ' + textStatus, 2000, 'rounded');
