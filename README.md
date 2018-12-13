@@ -1,5 +1,5 @@
-# PPO
-PPO on PHP Laravel Framework
+# Learn Laravel
+Do my labson PHP Laravel Framework
 
 Подробная документация на русском здесь: http://laravel.su/
 
